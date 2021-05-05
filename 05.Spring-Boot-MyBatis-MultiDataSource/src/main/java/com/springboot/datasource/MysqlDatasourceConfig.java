@@ -24,7 +24,7 @@ public class MysqlDatasourceConfig {
 	// mybatis mapper扫描路径
 	static final String MAPPER_LOCATION = "classpath:mapper/mysql/*.xml";
 
-	@Primary
+	@Primary //指定同一个接口有多个实现类可以注入的时候 , 默认注入哪一个
 	@Bean(name = "mysqldatasource")
 	@ConfigurationProperties("spring.datasource.druid.mysql")
 	public DataSource mysqlDataSource() {

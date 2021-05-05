@@ -14,6 +14,7 @@ public class Application {
 	
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(Application.class);
+		//命令行属性总是优先于其他属性源 eg:--server.port=9000
 		app.setAddCommandLineProperties(false);
 		app.run(args);
 	}
